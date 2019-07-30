@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Form from "./components/Form/form";
+import Results from "./components/Results/results";
 
-function App() {
+const initialResults = {
+  here: [],
+  mapbox: []
+};
+
+const App = () => {
+  const [results, setResults] = useState(initialResults);
+  // let results = initialResults;
+
+  const handleChange = async value => {
+    const newResults = await fetch(
+      `http://localhost:8888/results?value=${value}`
+    );
+    const json = await newResults.json();
+    debugger;
+
+    setResults(json);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        <h1>Zip code accuracy</h1>
+        <h2>Mapbox and Here.com comparison</h2>
       </header>
+      <main className="padder">
+        <div className="padder">
+          <Form onChange={handleChange} />
+        </div>
+        <div>
+          <Results className="padder" results={results} />
+        </div>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
