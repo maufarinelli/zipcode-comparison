@@ -1,8 +1,8 @@
-import React from "./node_modules/react";
-import { makeStyles } from "./node_modules/@material-ui/core/styles";
-import List from "./node_modules/@material-ui/core/List";
-import ListItem from "./node_modules/@material-ui/core/ListItem";
-import ListItemText from "./node_modules/@material-ui/core/ListItemText";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 
 const useStyle = makeStyles(() => ({
   listItem: {

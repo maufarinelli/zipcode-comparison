@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import "./styles.css";
-import Form from "./Components/Form/form";
-import Results from "./Components/Results/results";
+import Form from "./Components/Form/Form";
+import Results from "./Components/Results/Results";
 import fetchResults from "./services/fetchResults";
 
 const initialResults = {
