@@ -33,7 +33,8 @@ const Form = ({ onChange }) => {
       />
       <p>
         <small>
-          Search with the following match level: <b>state, city, postalCode</b>
+          Search with the following match level: <b>state, city, postalCode </b>
+          (3 or more characters)
         </small>
       </p>
     </form>
