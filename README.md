@@ -1,3 +1,3 @@
 ## Zip code accuracy comparison
 
-Mapbox and Here.com comparison
+Small app for a client, to compare Mapbox and Here.com zip code accuracy
